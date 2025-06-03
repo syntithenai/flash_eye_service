@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  camera-trigger:
+    build: .
+    ports:
+      - "5021:5021"
+    devices:
+      - "/dev/video0:/dev/video0"
+    restart: unless-stopped
+
